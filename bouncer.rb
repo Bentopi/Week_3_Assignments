@@ -5,7 +5,6 @@ def bouncer
       puts ""
       puts "So, how old are you?, (type quit to exit)"
       age = gets.chomp
-
     answers = {
       none: "You aren't really allowed to do absolutely anything.",
       smoke:  "You can smoke, choose what to smoke wisely, if anything.",
@@ -16,10 +15,12 @@ def bouncer
     age_number = age.to_i
     result = []
       case
-      when age == "quit"
-        puts "Goodbye!"
-      when age_number >= 25
-          result = answers.values_at(:rent, :vote, :drink, :smoke)
+        when age.empty?
+          puts "You have to enter something."
+        when age == "quit"
+          puts "Goodbye!"
+        when age_number >= 25
+            result = answers.values_at(:rent, :vote, :drink, :smoke)
         when age_number >= 21
           result = answers.values_at(:vote, :drink, :smoke)
         when age_number >= 18

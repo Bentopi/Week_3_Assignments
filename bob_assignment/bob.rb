@@ -19,7 +19,6 @@ def only_spaces(remark)
   end
 end
 
-
 def hey(remark)
   case
     when remark.empty? || only_spaces(remark) || remark.include?("\t")
@@ -38,10 +37,4 @@ def hey(remark)
     "Whatever."
     end
   end
-
 end
-
-
-
-
-# "1, 2, 3" is returning Whoa Chill out, needs to return Whatever

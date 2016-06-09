@@ -8,7 +8,6 @@ class Employee
     @emp_name = employee[:name]
     @email = employee[:email]
     @phone = employee[:phone]
-    @salary = employee[:salary]
-    puts "Welcome to the company, #{@emp_name}"
+    @salary = employee[:salary].to_i
   end
 end

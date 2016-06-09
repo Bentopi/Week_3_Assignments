@@ -12,7 +12,3 @@ class Employee
     puts "Welcome to the company, #{@emp_name}"
   end
 end
-
-
-
-# Create a new employee (given his/her name, email address, phone number, and salary).
